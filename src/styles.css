@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
+
+
+.header {
+    background: radial-gradient(at center bottom, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));
+    color: #ccc;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: 'Keania One', sans-serif;
+    padding: 40px;
+    text-shadow: 0 2px 2px #fffa;
+
+}
+
+.container {
+    margin: 0 5%;
+}

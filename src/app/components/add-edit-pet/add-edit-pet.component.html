@@ -1,0 +1,81 @@
+<header class="grid header">
+  <h1>{{titleComponent}}</h1>
+</header>
+
+<div class="container">
+    <br>
+    <app-spinners></app-spinners>
+    <form [formGroup]="formValidator" class="grid" (ngSubmit)="onSubmit()" >
+        <div class="col-12 sm:col-6">
+            <mat-card class="darkMode-child">
+                <mat-card-content>
+                    <div class="grid">
+                        <mat-form-field class="col-12">
+                            <mat-label>
+                                Name
+                            </mat-label>
+                            <input formControlName="name" matInput type="text" required>
+                        </mat-form-field>
+                        <mat-form-field class="col-12 sm:col-6">
+                            <mat-label>
+                                Breed
+                            </mat-label>
+                            <input formControlName="breed" matInput type="text" required>
+                        </mat-form-field>
+                        <mat-form-field class="col-12 sm:col-6">
+                            <mat-label>
+                                Age
+                            </mat-label>
+                            <input formControlName="age" matInput type="number" required >
+                        </mat-form-field>
+                        <mat-form-field class="col-12 sm:col-6">
+                            <mat-label>
+                                Color
+                            </mat-label>
+                            <input formControlName="color" matInput type="text" required>
+                        </mat-form-field>
+                        <mat-form-field class="col-12 sm:col-6">
+                            <mat-label>
+                                Weight
+                            </mat-label>
+                            <input formControlName="weight" matInput type="number" required>
+                        </mat-form-field>
+                    </div>
+
+                    <mat-card-actions class="flex justify-content-between">
+                        <button type="reset" mat-flat-button color="warn">
+                            <mat-icon>clear</mat-icon>
+                            Clear
+                        </button>
+                        <button [disabled]="formValidator.invalid"  mat-flat-button type="submit" color="primary">
+                            <mat-icon>save</mat-icon>
+                            Save
+                        </button>
+                        <button type="button" class="mat-btn-class btn3" mat-flat-button  mat-raised [routerLink]="['/list-pets']">
+                            <mat-icon class="icon-bnt-3" >undo</mat-icon>
+                            Back
+                        </button>
+                    </mat-card-actions>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-12 sm:col-6 p-2">
+            <mat-card class="darkMode-child">
+                <mat-card-content>
+                    <img matCardImage [src]="" alt="ImagePet" id="preview-image" >
+                    <mat-divider class="mb-2"></mat-divider>
+                    <mat-form-field class="col-12">
+                        <mat-label>Image URL</mat-label>
+                        <input formControlName="image" matInput type="text" required>
+                    </mat-form-field>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button type="button" mat-flat-button color="accent" (click)="previewImage()" >
+                        <mat-icon >preview</mat-icon>
+                        Preview
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </form>
+</div>
