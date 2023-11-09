@@ -1,0 +1,71 @@
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 50px;
+}
+
+
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: -20px;
+}
+
+th {
+    font-weight: 900;
+}
+
+td {
+    text-align: left;
+}
+
+mat-icon {
+    cursor: pointer;
+    margin-right: 14px;
+    transition-duration: 0.4s;
+}
+
+mat-icon:hover {
+    transform: scale(1.1, 1.1);
+    font-weight: 900;
+    text-shadow: 0 2px 4px #00000083;
+}
+
+mat-icon:active {
+    transform: scale(0.8, 0.8);
+}
+
+mat-icon:nth-child(1) {
+    color: #0ddd0dc7;
+}
+
+mat-icon:nth-child(2) {
+    color: #0827f5c7;
+    ;
+}
+
+mat-icon:nth-child(3) {
+    color: #ce1010c7;
+}
+
+.btn-new-cls {
+    transition-duration: 0.4s;
+    background-color: #c73a91;
+    color: #fff;
+    font-weight: 900;
+}
+
+.btn-new-cls:hover {
+    color: white;
+    transform: scale(1.1, 1);
+    /* Expansión horizontal al pasar el cursor sobre el botón */
+}
+
+.btn-new-cls:active {
+    transform: scale(0.8, 0.8);
+}
